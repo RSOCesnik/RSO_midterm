@@ -13,7 +13,7 @@ spec:
         app: image
     spec:
       containers:
-      - image: bcesnik/rso-image-uploader:1.0.0-SNAPSHOT-6.1
+      - image: bcesnik/rso_midterm:1.0.0-SNAPSHOT-5.1
         name: image
         ports:
         - containerPort: 8080
