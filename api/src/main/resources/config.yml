@@ -1,9 +1,9 @@
 kumuluzee:
-  name: image-comments-service
+  name: image-midterm
   env:
     name: dev
   version: 1.0.0
   server:
-    base-url: http://localhost:8080
+    base-url: http://localhost:8084
     http:
-      port: 8080
+      port: 8084

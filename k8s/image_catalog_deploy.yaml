@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: image-deploy
+  name: image-midterm-deploy
 spec:
   replicas: 1
   selector:
@@ -10,13 +10,13 @@ spec:
   template:
     metadata:
       labels:
-        app: image
+        app: image-midterm
     spec:
       containers:
-      - image: bcesnik/rso_midterm:1.0.0-SNAPSHOT-5.1
+      - image: bcesnik/rso_midterm:1.0.0-SNAPSHOT-6.1
         name: image
         ports:
-        - containerPort: 8080
+        - containerPort: 8084
           name: server
           protocol: TCP
 ---
@@ -24,12 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: image
+  name: image-midterm
 spec:
   type: LoadBalancer
   ports:
-  - port: 8080
+  - port: 8084
     protocol: TCP
-    targetPort: 8080
+    targetPort: 8084
   selector:
-    app: images
+    app: images-midterm
