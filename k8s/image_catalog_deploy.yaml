@@ -6,15 +6,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: image
+      app: image-midterm
   template:
     metadata:
       labels:
         app: image-midterm
     spec:
       containers:
-      - image: bcesnik/rso_midterm:1.0.0-SNAPSHOT-6.1
-        name: image
+      - image: bcesnik/rso_midterm:1.0.0-SNAPSHOT-7.1
+        name: image-midterm-service
         ports:
         - containerPort: 8084
           name: server
@@ -32,4 +32,4 @@ spec:
     protocol: TCP
     targetPort: 8084
   selector:
-    app: images-midterm
+    app: image-midterm

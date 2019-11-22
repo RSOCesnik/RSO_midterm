@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @ApplicationScoped
-@Path("/comments")
+@Path("/demo/info")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class ImageCommentsResource {
